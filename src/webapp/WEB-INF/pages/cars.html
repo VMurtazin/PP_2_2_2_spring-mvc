@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CARS</title>
+</head>
+<body>
+<br>
+<h2>Cars Table</h2>
+<hr>
+<br>
+<table border="1" style="width:300px">
+    <tr>
+        <th>Vendor</th>
+        <th>Color</th>
+        <th>Year</th>
+    </tr>
+    <tr th:each="car, iterStat : ${carslist}">
+        <td th:text="${car.getVendor()}"></td>
+        <td th:text="${car.getColor()}"></td>
+        <td th:text="${car.getYear()}"></td>
+    </tr>
+</table>
+<br>
+<hr>
+</body>
+</html>
